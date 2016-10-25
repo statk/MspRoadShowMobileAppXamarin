@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MspRoadShowMobileApp.Views.SpeakersView">
+  
+  <!--<ListView  ItemsSource="{Binding SpeakerList}"  x:Name="listContent" RowHeight="200" ItemSelected="SpeakerItemSelected">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell >
+         
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+
+              <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="100" ></RowDefinition>
+
+              </Grid.RowDefinitions>
+
+              <Label Grid.Row="0" Grid.Column="0" Text="{Binding name}" FontSize="20">
+              </Label>
+              <Label Grid.Row="1" Grid.Column="0" Text="{Binding description}" FontSize="20">
+              </Label>
+              <Image  Grid.Column="1" Grid.RowSpan="2" Source="{Binding imageLink}" Aspect="AspectFill">
+
+                --><!--on platform xaml demo--><!--
+
+                --><!--<Image.IsVisible>
+                    <OnPlatform x:TypeArguments="x:Boolean">
+                      <OnPlatform.iOS>true</OnPlatform.iOS>
+                      <OnPlatform.Android>true</OnPlatform.Android>
+                      <OnPlatform.WinPhone>true</OnPlatform.WinPhone>
+                      --><!--
+                --><!--<OnPlatform.Windows>false</OnPlatform.Windows>--><!--
+                --><!--
+                    </OnPlatform>
+                  </Image.IsVisible>--><!--
+              
+              </Image>
+            </Grid>
+       
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>-->
+  <WebView Source="http://msproadshow.azurewebsites.net/Speakers" x:Name="mweb"></WebView>
+</ContentPage>

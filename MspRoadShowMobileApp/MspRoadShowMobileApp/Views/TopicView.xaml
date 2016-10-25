@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MspRoadShowMobileApp.Views.TopicView">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="5*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid Grid.Row="0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"></ColumnDefinition>
+        <ColumnDefinition Width="1*"></ColumnDefinition>
+        <ColumnDefinition Width="Auto"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+     
+      <!--<Label Grid.Column="0" Text="{Binding name}" FontSize="70"></Label>-->
+      <Label Grid.Column="0" Text="Як пройти" HorizontalTextAlignment="End" FontSize="25" FontAttributes="Bold" x:Name="myLabel"></Label>
+      <Image Grid.Column="2" Source="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/38.Location-Pin-128.png" x:Name="myPointer"></Image>
+    </Grid>
+    <WebView Grid.Row="1" Source="{Binding url}">
+      
+    </WebView>
+  </Grid>
+</ContentPage>

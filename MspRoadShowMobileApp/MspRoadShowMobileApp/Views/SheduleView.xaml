@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MspRoadShowMobileApp.Views.SheduleView">
+  <Grid>
+    <Grid.Padding>
+      30, 10, 10, 20
+    </Grid.Padding>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="5*"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+    </Grid.RowDefinitions>
+  
+  <ListView Grid.Row="0" ItemsSource="{Binding Shedule}"  x:Name="listContent" RowHeight="150" ItemSelected="SheduleItemSelected" BackgroundColor="#eeeeee" >
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell >
+          <Grid BackgroundColor="#eeeeee">
+           
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"></RowDefinition>
+              <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="{Binding name}" FontAttributes="Bold"  FontSize="14"></Label>
+            <Grid Grid.Row="1" >
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Image Grid.Column="0" Source="http://www.liveviridian.com/wp-content/uploads/2014/12/47711A-LiveViridian-Sustainability-Local-Change-Imapct-Icons-Green-Clock.png" HeightRequest="30" HorizontalOptions="Center"></Image>
+              <Label Grid.Column="1" Text="{Binding StartTime}"  FontSize="15"></Label>
+              <!--<Image Grid.Column="2" Source="http://furtaev.ru/preview/user_3_small.png"></Image>
+              <Label Grid.Column="3" Text="{Binding speakers}"></Label>-->
+              <Image Grid.Column="4" Source="http://crec.unl.edu/images/Icons/buttons_FIT_Clock.png" HeightRequest="30" HorizontalOptions="Center"></Image>
+              <Label Grid.Column="5" Text="{Binding EndTime}"  FontSize="15"></Label>
+            </Grid>
+          </Grid>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+  </Grid>
+</ContentPage>

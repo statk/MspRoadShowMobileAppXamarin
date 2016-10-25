@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MspRoadShowMobileApp.Views.MenuView">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+      
+    </Grid.RowDefinitions>
+    
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="2*"></ColumnDefinition>
+      <ColumnDefinition Width="5*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    
+    <Label Grid.Row="2" Grid.Column="1" Text="Особистий кабінет" x:Name="mCabinet" FontSize="30" FontAttributes="Bold" TextColor="Blue" VerticalTextAlignment="Center"></Label>
+    <Label Grid.Row="3" Grid.Column="1" Text="Міста" x:Name="mCity" FontSize="30" FontAttributes="Bold" TextColor="Blue" VerticalTextAlignment="Center"></Label>
+    <Label Grid.Row="4" Grid.Column="1" Text="Доповідачи" x:Name="mSpeakers" FontSize="30" FontAttributes="Bold" TextColor="Blue" VerticalTextAlignment="Center"></Label>
+    <Label Grid.Row="5" Grid.Column="1" Text="Вийти" x:Name="mLogOut" FontSize="30" FontAttributes="Bold" TextColor="Blue" VerticalTextAlignment="Center"></Label>
+    <Image Grid.Row="2" Grid.Column="0" Source="https://cdn3.iconfinder.com/data/icons/linies-small/64/house-512.png" x:Name="mCabinetI"></Image>
+    <Image Grid.Row="3" Grid.Column="0" Source="http://www.vertrek.be/wp-content/uploads/2016/08/24713.png" x:Name="mCityI"></Image>
+    <Image Grid.Row="4" Grid.Column="0" Source="http://findicons.com/files/icons/1580/devine_icons_part_2/512/account_and_control.png" x:Name="mSpeakersI"></Image>
+    <Image Grid.Row="5" Grid.Column="0" Source="http://freeiconbox.com/icon/256/35805.png" x:Name="mLogOutI"></Image>
+    <Image Grid.Row="6" Grid.Column="0" Source=""></Image>
+  </Grid>
+</ContentPage>

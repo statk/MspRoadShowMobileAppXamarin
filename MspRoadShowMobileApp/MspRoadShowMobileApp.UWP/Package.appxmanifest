@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="4b77de26-f560-487a-826e-12e456348668" Publisher="CN=Kirill Stativkin" Version="1.0.4.0" />
+  <mp:PhoneIdentity PhoneProductId="4b77de26-f560-487a-826e-12e456348668" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>MspRoadShowMobileApp.UWP</DisplayName>
+    <PublisherDisplayName>Kirill Stativkin</PublisherDisplayName>
+    <Logo>Assets\train.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MspRoadShowMobileApp.UWP.App">
+      <uap:VisualElements DisplayName="Msp Road Show" Square150x150Logo="Assets\train.png" Square44x44Logo="Assets\train.png" Description="Msp Road Show mobile application" BackgroundColor="transparent">
+        <uap:DefaultTile>
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="splash.png" BackgroundColor="Green" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage" />
+  </Capabilities>
+</Package>

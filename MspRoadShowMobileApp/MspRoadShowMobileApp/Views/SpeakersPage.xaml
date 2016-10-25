@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<p:ListDataPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:p="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
+             x:Class="MspRoadShowMobileApp.Views.SpeakersPage"
+            Title="Speakers" 
+            StyleClass="Events">
+  <Grid>
+    <Grid.Padding>
+      30, 10, 10, 20
+    </Grid.Padding>
+ 
+     <p:ListDataPage.DataSource>
+     
+        <!--<p:JsonDataSource Source="http://demo3143189.mockable.io/sessions" />-->
+        <p:JsonDataSource Source="http://msproadshowdev.azurewebsites.net/api/Speakers" />
+    </p:ListDataPage.DataSource>
+   
+  <p:ListDataPage.DefaultItemTemplate >
+    <DataTemplate >
+        <ViewCell >
+            <p:ListItemControl
+               Title="{p:DataSourceBinding name}"
+                Detail="{p:DataSourceBinding description}"
+                ImageSource ="{p:DataSourceBinding imageLink}"
+                DataSource="{Binding Value}"
+                HeightRequest="200">
+           
+           <!--<p:ListItemControl
+                Title="{p:DataSourceBinding title}"
+                Detail="{p:DataSourceBinding room}"
+                
+                DataSource="{Binding Value}"
+                HeightRequest="90"
+                
+            >-->
+             <!--<Image Source="http://www.freeiconspng.com/uploads/water-splash-png-by-starlaa1-on-deviantart-5.png"></Image>-->
+              <Image Source="{p:DataSourceBinding imageLink}"></Image>
+              
+           
+            </p:ListItemControl>
+        </ViewCell>
+    </DataTemplate>
+</p:ListDataPage.DefaultItemTemplate>
+  </Grid>
+</p:ListDataPage>
