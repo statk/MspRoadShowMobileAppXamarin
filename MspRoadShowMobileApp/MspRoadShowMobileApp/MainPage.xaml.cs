@@ -9,6 +9,7 @@ namespace MspRoadShowMobileApp
 {
     public partial class MainPage : ContentPage
     {
+        //feature 1
         public MainPage()
         {
             InitializeComponent();
